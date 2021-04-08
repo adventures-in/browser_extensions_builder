@@ -1,14 +1,8 @@
+/// Support for doing something awesome.
+///
+/// More dartdocs go here.
+library browser_extensions_builder;
 
-import 'dart:async';
+export 'src/browser_extensions_builder_base.dart';
 
-import 'package:flutter/services.dart';
-
-class BrowserExtensionsBuilder {
-  static const MethodChannel _channel =
-      const MethodChannel('browser_extensions_builder');
-
-  static Future<String> get platformVersion async {
-    final String version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
-  }
-}
+// TODO: Export any libraries intended for clients of this package.

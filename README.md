@@ -1,5 +1,12 @@
 # browser_extensions_builder
 
-Generate browser extensions from Dart code.
+A builder for generating Javascript from Dart, for use in browser extensions.
 
-[Notes](https://docs.google.com/document/d/1HhaDNscBqbhKL2aH_868dGv8N7UKCaPPqEWCbQzn3cA/edit?usp=sharing)
+## Usage
+
+A simple usage example:
+
+```sh
+flutter pub run build_runner build
+```
+

@@ -1,23 +1,16 @@
-import 'package:flutter/services.dart';
-import 'package:flutter_test/flutter_test.dart';
 import 'package:browser_extensions_builder/browser_extensions_builder.dart';
+import 'package:test/test.dart';
 
 void main() {
-  const MethodChannel channel = MethodChannel('browser_extensions_builder');
+  group('A group of tests', () {
+    Awesome awesome;
 
-  TestWidgetsFlutterBinding.ensureInitialized();
-
-  setUp(() {
-    channel.setMockMethodCallHandler((MethodCall methodCall) async {
-      return '42';
+    setUp(() {
+      awesome = Awesome();
     });
-  });
 
-  tearDown(() {
-    channel.setMockMethodCallHandler(null);
-  });
-
-  test('getPlatformVersion', () async {
-    expect(await BrowserExtensionsBuilder.platformVersion, '42');
+    test('First Test', () {
+      expect(awesome.isAwesome, isTrue);
+    });
   });
 }
